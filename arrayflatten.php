@@ -1,15 +1,15 @@
 <?php 
 
 	function arrayFlatten($noFlatten){
-		# code...
+		# new array
 		$flatten = array();
 
 
 		# code...
 		foreach ($noFlatten as $key => $value) {
-			# code...
+			# check if there is new array inside
 			if (is_array($value)) {
-				# code...
+				# merge arrays
 				$flatten = array_merge_recursive($flatten, arrayFlatten($value));
 			}
 
